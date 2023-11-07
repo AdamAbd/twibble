@@ -2,12 +2,10 @@
 const prop = defineProps({
   isActive: {
     type: Boolean,
-    required: true,
     default: false
   },
   tertiary: {
     type: Boolean,
-    required: true,
     default: false
   }
 })

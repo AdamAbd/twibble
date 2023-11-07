@@ -4,7 +4,7 @@ import SideBarButton from './Buttons/SideBarButton.vue'
 
 <template>
   <aside
-    class="fixed top-0 left-0 z-40 w-[280px] h-screen pt-[74px] bg-black border-r border-gray-200"
+    class="fixed top-0 left-0 z-10 w-[280px] h-screen pt-[74px] bg-black border-r border-gray-200"
   >
     <div class="h-full pt-6 overflow-y-auto flex flex-col">
       <!-- Team Section -->

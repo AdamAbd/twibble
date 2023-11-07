@@ -4,7 +4,7 @@ import IconButton from './Buttons/IconButton.vue'
 </script>
 
 <template>
-  <nav class="fixed top-0 z-50 w-full bg-black border-b border-gray-200">
+  <nav class="fixed top-0 z-20 w-full bg-black border-b border-gray-200">
     <div class="flex items-center justify-between px-5 py-4">
       <!-- Content -->
       <div class="flex flex-row gap-[146px]">
