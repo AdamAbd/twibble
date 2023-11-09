@@ -4,7 +4,7 @@ import CustomButton from './Buttons/CustomButton.vue'
 </script>
 
 <template>
-  <nav class="fixed top-0 z-20 w-full bg-black border-b border-gray-200">
+  <nav class="fixed top-0 z-20 w-full bg-background border-b border-border">
     <div class="flex items-center justify-between px-5 py-4">
       <!-- Content -->
       <div class="flex flex-row gap-[146px]">
@@ -34,7 +34,7 @@ import CustomButton from './Buttons/CustomButton.vue'
             <input
               type="search"
               id="default-search"
-              class="block w-80 px-3.5 py-2 pl-10 text-base font-normal text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
+              class="block w-80 px-3.5 py-2 pl-10 text-base font-normal text-[#8C8C8C] border border-border rounded-lg bg-[#2B2B2B]"
               placeholder="Search"
               required
             />
@@ -63,7 +63,7 @@ import CustomButton from './Buttons/CustomButton.vue'
           </template>
         </CustomButton>
         <!-- Divider -->
-        <div class="w-px h-10 bg-white" />
+        <div class="w-px h-10 bg-border" />
         <!-- Avatar -->
         <AvatarItem />
       </div>

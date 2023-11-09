@@ -14,8 +14,11 @@ const prop = defineProps({
 <template>
   <button
     type="button"
-    class="text-white focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg px-3 py-2 text-center inline-flex items-center"
-    :class="{ 'bg-red-700 hover:bg-red-800': prop.isActive }"
+    class="focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg px-3 py-2 text-center inline-flex items-center"
+    :class="{
+      'bg-primary/10 hover:bg-primary/20': prop.isActive,
+      'hover:bg-primary/10': !prop.isActive
+    }"
   >
     <slot name="icon"></slot>
     <slot name="title">
@@ -24,7 +27,7 @@ const prop = defineProps({
     <svg
       v-if="prop.tertiary"
       xmlns="http://www.w3.org/2000/svg"
-      class="w-4 h-4 ml-auto p-0.5 border rounded"
+      class="w-5 h-5 ml-auto p-0.5 border border-border rounded"
       viewBox="0 0 16 16"
       fill="none"
     >

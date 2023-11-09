@@ -4,13 +4,13 @@ import SideBarButton from './Buttons/SideBarButton.vue'
 
 <template>
   <aside
-    class="fixed top-0 left-0 z-10 w-[280px] h-screen pt-[74px] bg-black border-r border-gray-200"
+    class="fixed top-0 left-0 z-10 w-[280px] h-screen pt-[74px] bg-background border-r border-border"
   >
     <div class="h-full pt-6 overflow-y-auto flex flex-col">
       <!-- Team Section -->
       <div class="px-5">
         <!-- Team Title -->
-        <h3 class="text-white text-xs font-normal tracking-wider">TEAMS</h3>
+        <h3 class="text-[#BBBBBB] text-xs font-normal tracking-wider">TEAMS</h3>
         <!-- Team Child -->
         <div class="flex flex-col gap-3 mt-3">
           <SideBarButton :is-active="true" :tertiary="true">
@@ -31,7 +31,7 @@ import SideBarButton from './Buttons/SideBarButton.vue'
               </svg>
             </template>
             <template #title>
-              <span class="font-normal text-base">#TeamTwibble</span>
+              <span class="font-normal text-base text-primary">#TeamTwibble</span>
             </template>
           </SideBarButton>
           <!-- Create New Team Button -->
@@ -39,7 +39,7 @@ import SideBarButton from './Buttons/SideBarButton.vue'
             <template #icon>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="w-5 h-5 mr-3 p-0.5 border rounded-md"
+                class="w-6 h-6 mr-3 p-0.5 border border-border rounded-md"
                 viewBox="0 0 20 20"
                 fill="none"
               >
@@ -53,12 +53,12 @@ import SideBarButton from './Buttons/SideBarButton.vue'
               </svg>
             </template>
             <template #title>
-              <span class="font-normal text-sm">CREATE NEW TEAMS</span>
+              <span class="font-normal text-sm text-[#BBBBBB]">CREATE NEW TEAMS</span>
             </template>
           </SideBarButton>
         </div>
       </div>
-      <div class="w-full h-px bg-white my-4" />
+      <div class="w-full h-px bg-border my-4" />
       <!-- Library Button -->
       <div class="px-5 flex flex-col">
         <SideBarButton>
@@ -76,13 +76,13 @@ import SideBarButton from './Buttons/SideBarButton.vue'
             </svg>
           </template>
           <template #title>
-            <span class="font-normal text-base">Library</span>
+            <span class="font-normal text-base text-[#BBBBBB]">Library</span>
           </template>
         </SideBarButton>
       </div>
       <!-- Help Center Button -->
       <div class="mt-auto">
-        <div class="w-full h-px bg-white" />
+        <div class="w-full h-px bg-border" />
         <div class="px-5 py-4 flex flex-col">
           <SideBarButton>
             <template #icon>
@@ -99,7 +99,7 @@ import SideBarButton from './Buttons/SideBarButton.vue'
               </svg>
             </template>
             <template #title>
-              <span class="font-normal text-base">Help Center</span>
+              <span class="font-normal text-base text-[#BBBBBB]">Help Center</span>
             </template>
           </SideBarButton>
         </div>

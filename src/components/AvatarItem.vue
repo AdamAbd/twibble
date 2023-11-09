@@ -1,10 +1,10 @@
 <script setup></script>
 
 <template>
-  <div class="max-w-[180px] justify-end items-center gap-3 inline-flex">
-    <div class="w-10 h-10 py-2 bg-zinc-800 rounded-[200px] justify-center items-center flex">
+  <div class="max-w-[180px] justify-end items-center gap-3 inline-flex cursor-pointer">
+    <div class="w-10 h-10 py-2 bg-[#2B2B2B] rounded-[200px] justify-center items-center flex">
       <div
-        class="w-10 text-center text-red-500 text-base font-medium font-['Inter'] leading-normal"
+        class="w-10 text-center text-primary text-base font-medium font-['Inter'] leading-normal"
       >
         AR
       </div>
@@ -22,7 +22,7 @@
           />
         </svg>
       </div>
-      <p class="text-zinc-500 text-sm font-normal leading-tight">andar@gmail.com</p>
+      <p class="text-[#7C7F82] text-sm font-normal leading-tight">andar@gmail.com</p>
     </div>
   </div>
 </template>
