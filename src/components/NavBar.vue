@@ -44,24 +44,26 @@ import CustomButton from './Buttons/CustomButton.vue'
       <!-- Content -->
       <div class="flex flex-row gap-6">
         <!-- CTA Button -->
-        <CustomButton :title="'NEW PROJECT'">
-          <template #icon
-            ><svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-5 h-5 mr-2"
-              viewBox="0 0 20 20"
-              fill="none"
-            >
-              <path
-                d="M10.0013 4.1665V15.8332M4.16797 9.99984H15.8346"
-                stroke="white"
-                stroke-width="1.66667"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </template>
-        </CustomButton>
+        <div class="flex flex-co">
+          <CustomButton :title="'NEW PROJECT'">
+            <template #icon
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-5 mr-2"
+                viewBox="0 0 20 20"
+                fill="none"
+              >
+                <path
+                  d="M10.0013 4.1665V15.8332M4.16797 9.99984H15.8346"
+                  stroke="white"
+                  stroke-width="1.66667"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </template>
+          </CustomButton>
+        </div>
         <!-- Divider -->
         <div class="w-px h-10 bg-border" />
         <!-- Avatar -->
