@@ -8,7 +8,7 @@ const email = ref('')
 </script>
 
 <template>
-  <div class="fixed z-30 w-screen h-screen bg-[black/50] font-rubik">
+  <div class="fixed z-30 w-screen h-screen bg-black/50 font-rubik">
     <div class="fixed top-0 bottom-0 right-0 left-0 m-auto w-[560px] h-min">
       <div class="relative w-full max-h-full">
         <!-- Modal content -->

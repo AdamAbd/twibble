@@ -54,6 +54,7 @@ const teamTitle = ref('')
                   @click="
                     () => {
                       teams.add(teamTitle)
+                      showModalTeam.hide()
                       showModalCollab.show()
                     }
                   "
