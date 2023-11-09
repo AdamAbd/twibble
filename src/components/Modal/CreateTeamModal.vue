@@ -1,16 +1,9 @@
 <script setup>
-import IconButton from '../Buttons/IconButton.vue'
-
-const prop = defineProps({
-  isShow: {
-    type: Boolean,
-    default: false
-  }
-})
+import CustomButton from '../Buttons/CustomButton.vue'
 </script>
 
 <template>
-  <div v-show="prop.isShow" class="fixed z-30 w-screen h-screen bg-black/40">
+  <div class="fixed z-30 w-screen h-screen bg-black/40">
     <div class="fixed top-0 bottom-0 right-0 left-0 m-auto w-[400px] h-min">
       <div class="relative w-full max-w-md max-h-full">
         <!-- Modal content -->
@@ -45,8 +38,8 @@ const prop = defineProps({
                 required
               />
               <div class="flex flex-row gap-3">
-                <IconButton :title="'Add Team'" />
-                <IconButton :title="'Add Team'" />
+                <CustomButton :title="'Add Team'" />
+                <CustomButton :title="'Add Team'" />
               </div>
             </form>
           </div>

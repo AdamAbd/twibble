@@ -1,6 +1,6 @@
 <script setup>
 import AvatarItem from './AvatarItem.vue'
-import IconButton from './Buttons/IconButton.vue'
+import CustomButton from './Buttons/CustomButton.vue'
 </script>
 
 <template>
@@ -44,7 +44,7 @@ import IconButton from './Buttons/IconButton.vue'
       <!-- Content -->
       <div class="flex flex-row gap-6">
         <!-- CTA Button -->
-        <IconButton :title="'NEW PROJECT'">
+        <CustomButton :title="'NEW PROJECT'">
           <template #icon
             ><svg
               xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +61,7 @@ import IconButton from './Buttons/IconButton.vue'
               />
             </svg>
           </template>
-        </IconButton>
+        </CustomButton>
         <!-- Divider -->
         <div class="w-px h-10 bg-white" />
         <!-- Avatar -->
