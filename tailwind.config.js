@@ -7,8 +7,16 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Rubik", "sans"],
+        'rubik': ['Rubik', 'sans-serif'],
+        'inter': ['Inter', 'sans-serif'],
       },
+      colors: {
+        'scaffold': '#161616',
+        'background': '#1E1E1E',
+        'primary': '#EF6351',
+        // 'tertiary': '#8C8C8C'
+        'border': '#404040'
+      }
     },
   },
   plugins: [],
