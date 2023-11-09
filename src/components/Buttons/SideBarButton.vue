@@ -14,7 +14,7 @@ const prop = defineProps({
 <template>
   <button
     type="button"
-    class="focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg px-3 py-2 text-center inline-flex items-center"
+    class="focus:outline-none rounded-lg px-3 py-2 text-center inline-flex items-center"
     :class="{
       'bg-primary/10 hover:bg-primary/20': prop.isActive,
       'hover:bg-primary/10': !prop.isActive

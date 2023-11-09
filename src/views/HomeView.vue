@@ -2,12 +2,15 @@
 import CreateTeamModal from '../components/Modal/CreateTeamModal.vue'
 import CustomButton from '../components/Buttons/CustomButton.vue'
 import CustomIconButton from '../components/Buttons/CustomIconButton.vue'
+import { useShowModalTeamStore } from '../stores/showModalTeam'
+
+const showModalTeam = useShowModalTeamStore()
 </script>
 
 <template>
-  <CreateTeamModal v-if="false" />
+  <CreateTeamModal v-if="showModalTeam.initial" />
 
-  <div class="h-screen px-6 pt-[98px] ml-[280px] bg-scaffold">
+  <div class="h-screen px-6 pt-[98px] ml-[280px] bg-scaffold font-poppins">
     <!-- Header Project -->
     <div class="flex flex-row justify-between">
       <!-- Tittle Project -->
@@ -76,7 +79,7 @@ import CustomIconButton from '../components/Buttons/CustomIconButton.vue'
     <div class="flex flex-col w-full mt-6">
       <div class="flex flex-row items-center justify-between">
         <button
-          class="text-white focus:outline-none font-normal text-sm text-center inline-flex items-center"
+          class="text-[#7C7F82] focus:outline-none font-normal text-sm text-center inline-flex items-center"
           type="button"
         >
           LAST VIEWED
@@ -98,7 +101,7 @@ import CustomIconButton from '../components/Buttons/CustomIconButton.vue'
 
         <label class="relative inline-flex items-center cursor-pointer">
           <input type="checkbox" value="" class="sr-only peer" />
-          <div class="relative w-14 h-7 rounded-lg border border-gray-600">
+          <div class="relative w-14 h-7 rounded-lg border border-border">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="absolute w-5 h-5 bg-slate-500 p-0.5 rounded-md top-[3px] left-[3px]"
@@ -133,12 +136,12 @@ import CustomIconButton from '../components/Buttons/CustomIconButton.vue'
           </div>
         </label>
       </div>
-      <div class="w-full h-px bg-white mt-2" />
+      <div class="w-full h-px bg-border mt-2" />
     </div>
 
     <div class="mt-6 flex flex-wrap gap-6">
       <div
-        class="w-[260px] h-[215px] border border-dashed rounded-lg flex flex-col gap-2 items-center justify-center"
+        class="w-[260px] h-[215px] border border-border border-dashed rounded-lg flex flex-col gap-2 items-center justify-center"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Rubik", "sans"],
+        'poppins': ['Poppins', 'sans-serif'],
+        'inter': ['Inter', 'sans-serif'],
       },
       colors: {
         'scaffold': '#161616',

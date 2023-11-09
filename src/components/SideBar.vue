@@ -1,10 +1,13 @@
 <script setup>
+import { useShowModalTeamStore } from '../stores/showModalTeam'
 import SideBarButton from './Buttons/SideBarButton.vue'
+
+const showModalTeam = useShowModalTeamStore()
 </script>
 
 <template>
   <aside
-    class="fixed top-0 left-0 z-10 w-[280px] h-screen pt-[74px] bg-background border-r border-border"
+    class="fixed top-0 left-0 z-10 w-[280px] h-screen pt-[74px] bg-background border-r border-border font-poppins"
   >
     <div class="h-full pt-6 overflow-y-auto flex flex-col">
       <!-- Team Section -->
@@ -35,7 +38,7 @@ import SideBarButton from './Buttons/SideBarButton.vue'
             </template>
           </SideBarButton>
           <!-- Create New Team Button -->
-          <SideBarButton>
+          <SideBarButton @click="showModalTeam.show()">
             <template #icon>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
