@@ -1,14 +1,22 @@
 <script setup>
+import { ref } from 'vue'
 import { useShowModalTeamStore } from '../../stores/showModalTeam'
 import CustomButton from '../Buttons/CustomButton.vue'
+import { useTeamStore } from '../../stores/team'
+import { useShowModalCollabStore } from '../../stores/showModalCollab'
 
 const showModalTeam = useShowModalTeamStore()
+const showModalCollab = useShowModalCollabStore()
+
+const teams = useTeamStore()
+
+const teamTitle = ref('')
 </script>
 
 <template>
-  <div class="fixed z-30 w-screen h-screen bg-black/50 font-poppins">
+  <div class="fixed z-30 w-screen h-screen bg-black/50 font-rubik">
     <div class="fixed top-0 bottom-0 right-0 left-0 m-auto w-[400px] h-min">
-      <div class="relative w-full max-w-md max-h-full">
+      <div class="relative w-full max-h-full">
         <!-- Modal content -->
         <div class="relative bg-background rounded-lg shadow">
           <div class="p-6">
@@ -37,10 +45,19 @@ const showModalTeam = useShowModalTeamStore()
                 class="bg-[#2B2B2B] border border-border text-base text-white font-medium font-inter rounded-lg focus:ring focus:ring-primary/30 focus:border-primary block w-full px-3.5 py-2.5"
                 placeholder="Team name"
                 required
+                v-model="teamTitle"
               />
               <div class="flex flex-row gap-3">
                 <CustomButton :title="'CANCEL'" :isPrimary="false" @click="showModalTeam.hide()" />
-                <CustomButton :title="'ADD TEAM'">
+                <CustomButton
+                  :title="'ADD TEAM'"
+                  @click="
+                    () => {
+                      teams.add(teamTitle)
+                      showModalCollab.show()
+                    }
+                  "
+                >
                   <template #icon>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

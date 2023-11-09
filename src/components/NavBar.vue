@@ -4,7 +4,7 @@ import CustomButton from './Buttons/CustomButton.vue'
 </script>
 
 <template>
-  <nav class="fixed top-0 z-20 w-full bg-background border-b border-border font-poppins">
+  <nav class="fixed top-0 z-20 w-full bg-background border-b border-border font-rubik">
     <div class="flex items-center justify-between px-5 py-4">
       <!-- Content -->
       <div class="flex flex-row gap-[146px]">

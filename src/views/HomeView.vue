@@ -1,16 +1,23 @@
 <script setup>
 import CreateTeamModal from '../components/Modal/CreateTeamModal.vue'
+import CollabModal from '../components/Modal/CollabModal.vue'
 import CustomButton from '../components/Buttons/CustomButton.vue'
 import CustomIconButton from '../components/Buttons/CustomIconButton.vue'
 import { useShowModalTeamStore } from '../stores/showModalTeam'
+import { useTeamStore } from '../stores/team'
+import { useShowModalCollabStore } from '../stores/showModalCollab'
 
 const showModalTeam = useShowModalTeamStore()
+const showModalCollab = useShowModalCollabStore()
+
+const { teams } = useTeamStore()
 </script>
 
 <template>
   <CreateTeamModal v-if="showModalTeam.initial" />
+  <CollabModal v-if="showModalCollab.initial" />
 
-  <div class="h-screen px-6 pt-[98px] ml-[280px] bg-scaffold font-poppins">
+  <div class="h-screen px-6 pt-[98px] ml-[280px] bg-scaffold font-rubik">
     <!-- Header Project -->
     <div class="flex flex-row justify-between">
       <!-- Tittle Project -->
@@ -30,7 +37,10 @@ const showModalTeam = useShowModalTeamStore()
             stroke-linejoin="round"
           />
         </svg>
-        <h1 class="text-white text-2xl font-normal">#TeamTwibble</h1>
+        <!-- Show title when is active is true -->
+        <div v-for="team in teams" :key="team.title">
+          <h1 v-if="team.isActive" class="text-white text-2xl font-normal">#{{ team.title }}</h1>
+        </div>
       </div>
       <!-- Actions -->
       <div class="inline-flex gap-4">

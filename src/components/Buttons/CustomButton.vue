@@ -2,12 +2,10 @@
 const prop = defineProps({
   title: {
     type: String,
-    required: true,
     default: 'Create'
   },
   isPrimary: {
     type: Boolean,
-    required: true,
     default: true
   }
 })
